@@ -13,7 +13,7 @@ let getSleepData = function (){
       console.log(sleepDataActual, key);
       sleepDataArray.push(sleepDataActual[key]);
     }
-    console.log(sleepDataArray);
+      console.log(sleepDataArray);
     $scope.sleepData = sleepDataArray;
 })
 }

@@ -3,6 +3,7 @@
 <div ng-repeat="data in sleepData" ng-show={sleepData.TOD === "evening"}>
 
   <label>Evening</label>
+
   <h5>{{data.date}}</h5>
   <h5>{{data.caffeineMorning}}</h5>
   <h5>{{data.caffeineAfternoon}}</h5>
@@ -12,7 +13,9 @@
   <h5>{{data.exerciseEvening}}</h5>
 
 </div><div ng-repeat="data in sleepData" ng-show={sleepData.TOD === "morning"}>
+
   <label>Morning</label>
+
   <h5>{{data.date}}</h5>
   <h5>{{data.bedtime}}</h5>
   <h5>{{data.waketime}}</h5>

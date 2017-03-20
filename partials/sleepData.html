@@ -1,0 +1,25 @@
+<h1> DATA!</h1>
+
+<div ng-repeat="data in sleepData" ng-show={sleepData.TOD === "evening"}>
+
+  <label>Evening</label>
+  <h5>{{data.date}}</h5>
+  <h5>{{data.caffeineMorning}}</h5>
+  <h5>{{data.caffeineAfternoon}}</h5>
+  <h5>{{data.caffeineEvening}}</h5>
+  <h5>{{data.exerciseMorning}}</h5>
+  <h5>{{data.exerciseAfternoong}}</h5>
+  <h5>{{data.exerciseEvening}}</h5>
+
+</div><div ng-repeat="data in sleepData" ng-show={sleepData.TOD === "morning"}>
+  <label>Morning</label>
+  <h5>{{data.date}}</h5>
+  <h5>{{data.bedtime}}</h5>
+  <h5>{{data.waketime}}</h5>
+  <h5>{{data.easeOfSleep}}</h5>
+  <h5>{{data.timesAwoken}}</h5>
+  <h5>{{data.minutesAwake}}</h5>
+  <h5>{{data.totalSleepHours}}</h5>
+  <h5>{{data.disturbedNotes}}</h5>
+
+</div>

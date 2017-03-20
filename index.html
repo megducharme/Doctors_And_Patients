@@ -4,14 +4,23 @@
   <title>Docs and Patients</title>
 </head>
 <body ng-app="DoctorsAndPatients">
-  <h1>Doctors and Patients!</h1>
 
+<div ng-view>
+
+</div>
 
 <!-- app specific files -->
-
+<script src="/lib/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/lib/node_modules/angular/angular.min.js"></script>
+<script src="/lib/node_modules/angular-route/angular-route.min.js"></script>
+<script src="/lib/node_modules/firebase/firebase.js"></script>
+<script src="app/app.js"></script>
+<script src="app/values/fbcreds.js"></script>
 <!-- factories -->
-
+<script src="app/factories/HospitalFactory.js"></script>
 <!-- controllers -->
+<script src="app/controllers/DoctorsCtrl.js"></script>
+<script src="app/controllers/PatientsCtrl.js"></script>
 
 </body>
 </html>

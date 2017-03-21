@@ -1,5 +1,4 @@
-app.factory('AuthFactory', function ('fb-creds') {
-
+app.factory('AuthFactory', function () {
 
   return {
 

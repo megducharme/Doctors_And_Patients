@@ -2,7 +2,9 @@
 app.controller('EveningDiaryCtrl', function ($scope, SleepDataFactory) {
 
 
-$scope.sleepData = {}
+$scope.sleepData = {
+  TOD: "evening"
+}
 
 
  $scope.postSleepData = function (sleepData) {
@@ -13,10 +15,6 @@ $scope.sleepData = {}
 
    /* body... */
  }
-
-
-
-
 
 
 })

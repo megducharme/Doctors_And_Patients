@@ -1,15 +1,15 @@
 <!-- PARTIAL -->
-<h2 class=" text-center bg-warning">Evening</h2 ng-model=sleepData.TOD = evening>
+<h2 class=" text-center bg-warning">Evening</h2>
 
 
 <!-- MAIN INPUT FORM EVENING-->
  <form class="form">
 
      <!-- Date -->
-    <label> Date:
-    <input class="bg-info form-control" data-toggle="dropdown" type="date" name="day" ng-model="sleepData.date">
+   <!--  <label> Date:
+    <input class="bg-info form-control" id="theDate" data-toggle="dropdown" type="date" name="day" ng-model="sleepData.date">
     </label>
-    <br>
+    <br> -->
 
     <!-- For fun -->
     <img class="rounded-corners-2" src="http://i1.kym-cdn.com/photos/images/original/001/221/588/f9e.gif">
@@ -71,6 +71,7 @@
     <br>
 
     <label>During the day, how likely was I to dose off while performing daily activities
+
       <select ng-model=sleepData.doseOff>
         <option value="no-chance">
           No chance
@@ -123,17 +124,44 @@
       </label>
     <br>
 
-    <a href = "#!/landingPage"> <button type="button" class="btn btn-primary" ng-click="postSleepData(sleepData)">Save</button> </a>
+    <a href = "#!/getData"> <button type="button" class="btn btn-primary" ng-keyup="$event.keyCode == 13 ? postSleepData() : null"
+
+    ng-click="postSleepData(sleepData)">Save</button> </a>
 
 <!-- THE END OF THE DAYTIME FORM -->
  </form>
 
  <!-- Quick and Dirty inline script -->
-<script type="text/javascript">
+
+
+  <script type="text/javascript">
 
       var select = '';
     for (i=1; i<=100; i++){
         select += '<option val=' + i + '>' + i + '</option>';
     }
     $('.dropdown').html(select);
+
+
+
+$(document).ready(function() {
+    var date = new Date();
+
+    var day = date.getDate();
+    var month = date.getMonth() + 1;
+    var year = date.getFullYear();
+
+    if (month < 10) month = "0" + month;
+    if (day < 10) day = "0" + day;
+
+    var today = year + "-" + month + "-" + day;
+    $("#theDate").attr("value", today);
+});
+
+
+
+
+
+
+
   </script>

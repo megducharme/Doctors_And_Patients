@@ -1,12 +1,15 @@
 "use strict";
-app.controller('MorningDiaryCtrl', function ($scope, SleepDataFactory) {
+app.controller('MorningDiaryCtrl', function ($scope, SleepDataFactory, $location) {
 
-$scope.sleepData = {}
+$scope.sleepData = {
+  TOD: "morning"
+}
 
 
  $scope.postSleepData = function (sleepData) {
 
   SleepDataFactory.postSleepData(sleepData);
+  $location.path("/landingPage");
 
  }
 

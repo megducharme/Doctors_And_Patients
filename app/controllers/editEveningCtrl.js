@@ -2,7 +2,9 @@ app.controller('editEveningCtrl', function($routeParams, SleepDataFactory, $scop
 
 SleepDataFactory.getOneSleepData($routeParams.sleepDataItem)
 .then((sleepData) => {
+
   console.log("this is the other sleepData inside the editEveningCtrl", sleepData);
+
 $scope.sleepData = sleepData.data;
 
 })

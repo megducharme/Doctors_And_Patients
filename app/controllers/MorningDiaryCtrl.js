@@ -5,6 +5,7 @@ $scope.sleepData = {
   TOD: "morning"
 }
 
+$scope.sleepData.date = new Date()
 
  $scope.postSleepData = function (sleepData) {
 

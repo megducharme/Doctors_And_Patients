@@ -5,7 +5,7 @@ app.controller('EveningDiaryCtrl', function ($scope, SleepDataFactory) {
 $scope.sleepData = {
   TOD: "evening"
 }
-
+$scope.sleepData.date = new Date()
 
  $scope.postSleepData = function (sleepData) {
 

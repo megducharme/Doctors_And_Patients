@@ -17,14 +17,14 @@
 <body ng-app="SleepDataTracker" ng-controller="EveningDiaryCtrl">
 <h1 class="jumbotron text-center text-capitalize">Sleep Diary Tracker</h1>
 
+  <div ng-include="'partials/navbar.html'">
+
+  </div>
 
 <div ng-view>
 
+
 </div>
-
-
-
-
 
 
 <!-- SCRIPTS -->
@@ -53,6 +53,7 @@
   <script src="app/controllers/LandingPagesCtrl.js"></script>
   <script src="app/controllers/editEveningCtrl.js"></script>
   <script src="app/controllers/editMorningCtrl.js"></script>
+    <script type="text/javascript" src="app/controllers/UserCtrl.js"></script>
 
 
 
